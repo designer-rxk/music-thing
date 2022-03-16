@@ -1,38 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+body {
+    background-color: #DDD;
+}
 .App {
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.c-player {
+    display: block;
+    background-color: #313131;
+    display: block;
+    margin: 0px auto;
+    padding: 50px;
+    border-radius: 16px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.c-player > h4 {
+    color: #FFF;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.c-player > p {
+    color: #AAA;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
 }
-
-.App-link {
-  color: #61dafb;
+.c-player > p span {
+    font-weight: 400;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.c-player--details .details-img {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+.c-player--details .details-img img {
+    display: block;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+}
+.c-player--details .details-img:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    bottom: -25px;
+    border-radius: 50%;
+    border: 3px dashed rgba(255, 206, 0, 1);
+}
+.c-player--details .details-title {
+    color: #EEE;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.c-player--details .details-artist {
+    color: #AAA;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.c-player--controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.c-player--controls .play-btn {
+    width:64px;
+    height:64px;
+    display: flex;
+    margin: 0 30px;
+    padding: 16px 22px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: #FFCE00;
+    color: #FFF;
+    font-size: 32px;
+    cursor: pointer;
+}
+.play-btn:hover{
+    transform: scale(1.05);
+}
+.c-player--controls .skip-btn {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 18px;
+}
+.skip-btn:hover{
+    color: #FFCE00;
 }
